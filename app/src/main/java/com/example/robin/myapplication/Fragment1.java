@@ -64,7 +64,7 @@ public class Fragment1 extends Fragment{
                        @Override
                        public void onClick(View view) {
                            message = write.getText().toString();
-                           reference5.push().setValue(message);
+                           reference5.push().setValue(message); //
                            //textView.append(store[i]+"\n");
                            comment_counter++;
                            y.setText(message);
