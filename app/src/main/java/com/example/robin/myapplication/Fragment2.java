@@ -55,7 +55,6 @@ public class Fragment2 extends Fragment
         listView = getActivity().findViewById(R.id.listview111);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayList);
         listView.setAdapter(arrayAdapter);
-
         reference5.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
