@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "910193508950",
+    "firebase_url": "https://myapplication2-702cd.firebaseio.com",
+    "project_id": "myapplication2-702cd",
+    "storage_bucket": "myapplication2-702cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910193508950:android:e02205a4a3fc841a",
+        "android_client_info": {
+          "package_name": "com.example.robin.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910193508950-d9imvqpbdskef9qn06td0se4ipnlcnn3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.robin.myapplication",
+            "certificate_hash": "66b2c7e5f8de1b0df63ee1f5a748a416306d67fd"
+          }
+        },
+        {
+          "client_id": "910193508950-om2bugb01j2d3m5af1870lpoujoi2fkl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWRNSae7hVXV2J2puOLHUrKicAL-xfAn0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910193508950-om2bugb01j2d3m5af1870lpoujoi2fkl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
