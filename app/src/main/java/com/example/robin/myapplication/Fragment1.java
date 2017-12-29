@@ -45,35 +45,37 @@ public class Fragment1 extends Fragment{
         ok = getActivity().findViewById(R.id.ok);
         y = getActivity().findViewById(R.id.commentbox);
         x = getActivity().findViewById(R.id.likebox);
-       comments = getActivity().findViewById(R.id.comments);
+        comments = getActivity().findViewById(R.id.comments);
         repo = getActivity().findViewById(R.id.repo);
         bookmark = getActivity().findViewById(R.id.bookmark);
+        write.setVisibility(View.GONE);
+        ok.setVisibility(View.GONE);
+           comments.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   if (write.isShown() && ok.isShown()) {
+                       write.setVisibility(View.GONE);
+                       ok.setVisibility(View.GONE);
+                   } else {
+                       write.setVisibility(View.VISIBLE);
+                       ok.setVisibility(View.VISIBLE);
+                   }
+                   ok.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View view) {
+                           message = write.getText().toString();
+                           reference5.push().setValue(message);
+                           //textView.append(store[i]+"\n");
+                           comment_counter++;
+                           y.setText(message);
+                           write.setText("");
 
-                if (write.isShown() && ok.isShown()) {
-                    write.setVisibility(View.GONE);
-                    ok.setVisibility(View.GONE);
-                } else {
-                    write.setVisibility(View.VISIBLE);
-                    ok.setVisibility(View.VISIBLE);
-                }
-                ok.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        write.setText("");
-                        message = write.getText().toString();
-                        // arrayList.add(message);
-                        reference5.push().setValue(message);
+                       }
 
-                        //  TextView textView = (TextView)getActivity().findViewById(R.id.texts);
-                        // for(int i =0;i<=comment_counter;i++)
-                        //textView.append(store[i]+"\n");
+                   });
 
-                        comment_counter++;
-                        y.setText(message);
-
-                    }
-
-                });
+               }
+           });
 
         y.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +90,7 @@ public class Fragment1 extends Fragment{
                 fragmentTransaction.commit();
             }
         });
-        signout.setOnClickListener(new View.OnClickListener() {
+/*        signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseAuth mauth;
@@ -96,7 +98,7 @@ public class Fragment1 extends Fragment{
                 mauth.signOut();
                 startActivity(new Intent(getActivity(), Main2Activity.class));
             }
-        });
+        });  */
     }
 
 }
